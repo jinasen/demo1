@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="">
+			选择你喜欢的照片：
+			<select id="sel" onchange="fun()">
+				<option selected value="1">图片1</option>
+				<option value="2">图片2</option>
+				<option value="3">图片3</option>
+				<option value="4">图片4</option>
+				<option value="5">图片5</option>
+				<option value="6">图片6</option>
+			</select>
+		</form>
+		<p id="p1"><img src="img/1.jpg"/></p>
+		<script type="text/javascript">
+			function fun(){
+				var p1=document.getElementById("p1");
+				var objsel=document.getElementById("sel");
+				var x=0;
+				x=objsel.value;
+				p1.innerHTML=("<img src=img/"+x+".jpg />")
+			}
+		</script>
+	</body>
+</html>
